@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- John Brandenburg -->
+<!-- Visual Frameworks -->
+<!-- Term 0113 -->
+<!-- Project 4: Homework Tracker -->
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta keywords="homework, assignment, tracker" />
+		<meta name= "desrciption" content="The first web app of John Brandenburg" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="640" />
+		<title>Homework Tracker</title>
+		<link href="css/styles.css" rel="stylesheet" />	
+	</head>
+	<body>
+		<header><h1>Homework Tracker</h1></header>
+		<p>Enter your information into the fields below to add a new assignment and track your homework.</p>
+		<nav>
+			<a href="#" id="boom">Clear Homework</a> 
+			<a href="#" id="displayDataLink">Display Homework</a>
+			<a href="additem.html" id="addAssignment" style="display:none;">Add New Homework</a>
+		</nav>
+<!--Start of my form -->
+		<form action="#" method="post" id="form" >
+			<fieldset>
+				<legend>Student Information</legend>
+				<ul id="errors"></ul>
+				<ul id="student">
+					<li><label for="fname">First Name:</label><input type="text" id="fname" placeholder="John" /></li>
+					<li><label for="lname">Last Name:</label><input type="text" id="lname" placeholder="Smith" /></li>
+					<li><label for="email">Email:</label><input type="email" id="email" placeholder="likethis@gmail.com"/></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+
+<!-- Start of assignemt information fields -->
+				<legend>Assignment Information</legend>
+				<ul>
+					<li id="select"><label form="course">Course:</label><br /></li>
+				</ul>
+				<ul>
+					<li><label for="project">Project Due?</label>
+						<ul class="checkbox">
+							<li><input type="radio" checked="checked" value="Yes" id="answer" name="due" /><label for="Yes">Yes</label.>
+							<li><input type="radio" checked="checked" value="No" id="answer" name="due" /><label for="No">No</label.>
+							<li><input type="radio" checked="checked" value="Unknown" id="answer" name="due" /><label for="Unknown">Unknown</label.>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li><label for="duedate">Date Due:</label><input type="date" min="2000-01-01" max="3000-01-01" id="date" name=duedate></li>
+				</ul>
+				<ul>
+					<li><label for="textarea">Notes:</label></li>	
+					<textarea type="text" id="notes"></textarea>
+				</ul>
+				<ul>
+					<li><label for="time">Total Hours To Complete</label><input type="range" min="1" max="10" name="time" type="range" id="complete"></li>
+				</ul>
+			</fieldset>
+			<input type="button" value="Save my stuff!" id="save"/>
+<!-- End of form -->
+		<form>
+		<script type="text/javascript" src="js/json.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+<html>

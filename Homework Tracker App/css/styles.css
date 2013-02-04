@@ -1,0 +1,59 @@
+/*
+title: my style sheet
+by: John Brandenburg
+project 4
+Term: 0113
+*/
+h1 {
+	font-family: Times;
+	font-variant: small-caps;
+	text-align: center;
+	color: #fff;
+	border: 2px solid black;
+	padding: 5px;
+	margin: 10px 0px 10px 0px;
+	background: maroon;
+}
+
+body {
+	font-family: Arial;
+	padding: 10px;
+	margin: 10px;
+	background: gray;
+}
+
+p1 {
+	font-family: Times;
+	margin: 5px
+}
+
+form {
+	background: #fff;
+	margin: 5px
+}
+
+legend {
+	font-family: Times;
+	text-align: center;
+	font-variant: small-caps;
+}
+
+errors {
+	font-family: Times;
+	font-size 3pt;
+	text-align: left;
+	color: red;
+}
+nav {
+	font-family: Arial;
+	font-size: 12pt;
+}
+input {
+	text-align: left;
+	color: black;
+}
+
+li {
+	background: #fff;
+	margin: 5px
+}
