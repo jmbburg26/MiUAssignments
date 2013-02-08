@@ -285,7 +285,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 
 	//Variable Defaults
-	var selectCourses = ["-- Current Courses --", "MMD", "MMD2", "SDI", "VFW", "PMA", "PMA 2"],
+	var selectCourses = ["-- Current Courses --", "MMD", "MMD2", "SDI", "VFW", "PMA", "PMA2"],
 		dueValue;
 		errValue = sData('errors'); 
 	
