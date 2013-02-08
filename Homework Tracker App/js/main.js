@@ -1,6 +1,7 @@
-//John Brandenburg
-//Project 4
-//Term: 0113
+<!-- John Brandenburg -->
+<!-- MiU -->
+<!-- Term 1302 -->
+<!-- Project 1: Homework Tracker -->
 
 window.addEventListener("DOMContentLoaded", function(){
 

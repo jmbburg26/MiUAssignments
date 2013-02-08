@@ -1,8 +1,9 @@
 /*
 title: my style sheet
-by: John Brandenburg
-project 4
-Term: 0113
+John Brandenburg
+MiU
+Term 1302
+Project 1: Homework Tracker
 */
 h1 {
 	font-family: Times;
@@ -19,17 +20,27 @@ body {
 	font-family: Arial;
 	padding: 10px;
 	margin: 10px;
-	background: gray;
+	background-color: #CCC;
 }
 
 p1 {
+	padding: none
+	margin: 10px
+}
+
+p2 {
 	font-family: Times;
-	margin: 5px
+	font-variant: small-caps;
+	text-align: center;
+	color: maroon;
+	padding: 5px;
 }
 
 form {
 	background: #fff;
-	margin: 5px
+	margin: 5px;
+	padding: 10px;
+	border: 0px;
 }
 
 legend {
@@ -56,4 +67,15 @@ input {
 li {
 	background: #fff;
 	margin: 5px
+}
+
+submit {
+ color: #fff;
+ font-size: 0;
+ width: 135px;
+ height: 60px;
+ border: none;
+ margin: 0;
+ padding: 0;
+ background: #0c0 url(images/send-now.gif) 0 0 no-repeat; 
 }
