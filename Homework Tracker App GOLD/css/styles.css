@@ -1,0 +1,70 @@
+/*
+title: my style sheet
+John Brandenburg
+MiU
+Term 1302
+Project 1: Homework Tracker
+*/
+h1 {
+	font-family: Times;
+	font-variant: small-caps;
+	text-align: center;
+	color: #fff;
+	border: 2px solid black;
+	padding: 5px;
+	margin: 10px 0px 10px 0px;
+	background: maroon;
+}
+
+body {
+	font-family: Arial;
+	padding: 10px;
+	margin: 10px;
+	background-color: #CCC;
+}
+
+p1 {
+	padding: none
+	margin: 10px
+}
+
+p2 {
+	font-family: Times;
+	font-variant: small-caps;
+	text-align: center;
+	color: maroon;
+	padding: 5px;
+}
+
+form {
+	background: #fff;
+	margin: 5px;
+	padding: 10px;
+	border: 0px;
+}
+
+legend {
+	font-family: Times;
+	text-align: center;
+	font-variant: small-caps;
+}
+
+errors {
+	font-family: Times;
+	font-size 3pt;
+	text-align: left;
+	color: red;
+}
+nav {
+	font-family: Arial;
+	font-size: 12pt;
+}
+input {
+	text-align: left;
+	color: black;
+}
+
+li {
+	background: #fff;
+	margin: 5px;
+}
