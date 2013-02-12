@@ -1,7 +1,7 @@
 <!-- John Brandenburg -->
 <!-- MiU -->
 <!-- Term 1302 -->
-<!-- Project 1: Homework Tracker -->
+<!-- Project 2: Homework Tracker -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,34 +9,87 @@
 		<meta keywords="homework, assignment, tracker" />
 		<meta name="desrciption" content="The first web app of John Brandenburg" />
 		<meta name="robots" content="index, follow" />
-		<meta name="viewport" content="user-scalable=no, width=device-width initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0" />
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />
+		<meta http-equiv="cleartype" content="on">
 		<title>Homework Tracker</title>
-		<link href="css/styles.css" rel="stylesheet" />
+		
+		<!-- My stylesheets -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	
+		<!-- Script for Modernizer -->
+		<script src="js/libs/modernizr.custom.min.js"></script>	
 	</head>
+	
 	<body>
-		<header><h1>Homework Tracker</h1></header>
-		<fieldset>
-	<!-- Feature Image -->
-			<p1><a href="additem.html"><img src="images/AppFeature.jpg" width="260" height="60"></img></a></p1>
-	<!-- Search Area -->
-			<form>
-				<div><p2>Enter search items into the box:</p2></div>
-				<input id="search" type="text" placeholder="Enter search here">
-				<input id="submit" type="submit" value="Search">
-			</form>
-		</fieldset>
-	<!-- Browse title and buttons -->
-		<div><p2>Select A Category To Browse:</p2></div>
-		<fieldset>
-			<ol>
-				<div><button>First Name</button></div>
-				<div><button>Last Name</button></div>
-				<div><button>Email</button></div>
-				<div><button>Course</button></div>
-				<div><button>Date</button></div>
-			</ol>
-		</fieldset>
+		
+		<!-- My home page for app -->	
+		<div data-role="page" id="home">
+			<div data-role="header">
+				<h1>Homework Tracker</h1>
+			</div>
+			
+			<div data-role="content">
+				
+				<!-- Feature Image -->
+				<p><a href="additem.html"><img src="images/AppFeature.jpg" width="400" height="80"></img></a></p>
+				
+				<!-- Search Area -->
+				<form>
+					<div><p>Enter search items into the box:</p></div>
+					<input id="search" type="text" placeholder="Enter search here">
+					<input id="submit" type="submit" value="Search">
+				</form>
+			</div>
+			<!-- Browse title and buttons -->
+			<div>
+				<p>Select A Category To Browse:</p>
+				<p><a href="#error" data-role="button" data-icon="arrow-r" data-iconpos="right">First Name</a></p>
+				<p><a href="#error" data-role="button" data-icon="arrow-r" data-iconpos="right">Last Name</a></p>
+				<p><a href="#error" data-role="button" data-icon="arrow-r" data-iconpos="right">Email</a></p>
+				<p><a href="#error" data-role="button" data-icon="arrow-r" data-iconpos="right">Course</a></p>
+				<p><a href="#error" data-role="button" data-icon="arrow-r" data-iconpos="right">Date</a></p>
+			</div>
+			<!-- Fixed footer and navbar -->
+			<div data-role="footer" data-position="fixed" data-id="main">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#main" data-icon="home">Home</a></li>
+						<li><a href="#search" data-icon="search">Search</a></li>
+						<li><a href="#browse">Browse</a></li>
+						<li><a href="#news">News</a></li>
+					</ul>
+				</div>	
+			</div>
+			
+		</div>
+		
+		<div data-role="page" id="error" data-add-back-btn="true">
+			<div data-role="header">
+				<h1>Homework Tracker</h1>
+			</div>
+			
+			<div data-role="content" id="error">
+				<p>This page is under construction. Please check back at a later time.</p>
+			<!-- Fixed footer and navbar -->
+			<div data-role="footer" data-position="fixed" data-id="main">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#search" data-icon="search">Search</a></li>
+						<li><a href="#browse">Browse</a></li>
+						<li><a href="#news">News</a></li>
+					</ul>
+				</div>	
+			</div>
+			
+		</div>
+		
+		<!-- JavaScript -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
