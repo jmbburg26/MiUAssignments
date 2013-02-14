@@ -39,22 +39,16 @@
 					<a href="additem.html"><img src="images/AppFeature.jpg" width="290" height="80"></img></a>
 				</div>
 				
-				<!-- Search Area -->
-				<div>
-					<div><p>Enter search items into the box:</p></div>
-					<input id="search" type="text" placeholder="Enter search here">
-					<input id="submit" type="submit" value="Search">
-				</div>
 			</div>
 			<!-- Browse title and buttons -->
 			<div data-role="content">
-				<ul data-role="listview">
-					<p>Select A Category To Browse:</p>
-					<p><a href="#error" data-role="button" data-icon="arrow-r" data-iconpos="right">First Name</a></p>
-					<p><a href="#error" data-role="button" data-icon="arrow-r" data-iconpos="right">Last Name</a></p>
-					<p><a href="#error" data-role="button" data-icon="arrow-r" data-iconpos="right">Email</a></p>
-					<p><a href="#error" data-role="button" data-icon="arrow-r" data-iconpos="right">Course</a></p>
-					<p><a href="#error" data-role="button" data-icon="arrow-r" data-iconpos="right">Date</a></p>
+				<ul data-role="listview" data-inset="true" data-filter="true">
+					<h3>Select A Category To Browse:</h3>
+					<li><a href="#browse">First Name</a></li>
+					<li><a href="#browse">Last Name</a></li>
+					<li><a href="#browse">Email</a></li>
+					<li><a href="#browse">Course</a></li>
+					<li><a href="#browse">Date</a></li>
 				</ul>
 			</div>
 			<!-- Fixed footer and navbar -->
@@ -62,7 +56,8 @@
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
-						<li><a href="#error" data-icon="grid">Browse</a></li>
+						<li><a href="#browse" data-icon="grid">Browse</a></li>
+						<li><a href="#add" data-icon="plus">Add</a></li>
 						<li><a href="#about" data-icon="info">About</a></li>
 					</ul>
 				</div>	
@@ -70,8 +65,8 @@
 			
 		</div>
 		
-		<!-- My error page that shows up when you try to browse -->	
-		<div data-role="page" id="error" data-add-back-btn="true" data-theme="b">
+		<!-- My browse page with functioning search -->	
+		<div data-role="page" id="browse" data-add-back-btn="true" data-theme="b">
 		
 			<div data-role="header" data-position="fixed">
 				<h1>Browse</h1>
@@ -83,16 +78,82 @@
 				<div>
 					<a href="additem.html"><img src="images/AppFeature.jpg" width="290" height="80"></img></a>
 				</div>
-				
-				<!-- Search Area -->
-				<div>
-					<div><p>Enter search items into the box:</p></div>
-					<input id="search" type="text" placeholder="Enter search here">
-					<input id="submit" type="submit" value="Search">
+			</div>
+			
+			<div data-role="content" id="browse">
+				<div data-role="content">
+					<ul data-role="listview" data-filter="true" data-theme="a">
+						<li data-role="list-divder">BRANDENBURGS</li>
+						
+						<li>
+							<h3>John Brandenburg</h3>
+						</li>
+						<li>
+							<h3>Amanda Brandenburg</h3>
+						</li>
+						<li>
+							<h3>Douglas Brandenburg</h3>
+						</li>
+						<li>
+							<h3>Rhonda Brandenburg</h3>
+						</li>
+						<li>
+							<h3>Sarah Brandenburg</h3>
+						</li>
+						<li>
+							<h3>Zachary Brandenburg</h3>
+						</li>
+						<li>
+							<h3>Melissa Brandenburg</h3>
+						</li>
+						<li data-role="list-divder">BLADORNS</li>
+						<li>
+							<h3>Allan Bladorn</h3>
+						</li>
+						<li>
+							<h3>Rebecca Bladorn</h3>
+						</li>
+					</ul>
 				</div>
 			</div>
 			
-			<div data-role="content" id="error" data-inset="true">
+			<!-- Fixed footer and navbar -->
+			<div data-role="footer" data-position="fixed" data-id="browse">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#browse" data-icon="grid">Browse</a></li>
+						<li><a href="#add" data-icon="plus">Add</a></li>
+						<li><a href="#about" data-icon="info">About</a></li>
+					</ul>
+				</div>	
+			</div>
+			
+		</div>
+			
+			<div data-role="page" id="add" data-add-back-btn="true" data-theme="b">
+		
+			<div data-role="header" data-position="fixed">
+				<h1>Add Item</h1>
+			</div>
+			
+			<div data-role="content">
+				
+				<!-- Feature Image -->
+				<div>
+					<a href="additem.html"><img src="images/AppFeature.jpg" width="290" height="80"></img></a>
+				</div>
+			</div>
+				<!-- Search Area -->
+			<div>
+				<div>
+					<ul data-role="listview" data-inset="true" data-filter="true">
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div data-role="content" id="add" data-inset="true">
 				<p>This page is under construction. Please check back at a later time.</p>
 			</div>
 			
@@ -102,13 +163,13 @@
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#browse" data-icon="grid">Browse</a></li>
+						<li><a href="#add" data-icon="plus">Add</a></li>
 						<li><a href="#about" data-icon="info">About</a></li>
 					</ul>
 				</div>	
 			</div>
 			
 		</div>
-			
 		<!-- My about page that shows my information -->	
 		<div data-role="page" id="about" data-add-back-btn="true" data-theme="b">
 			
@@ -135,24 +196,24 @@
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Bronze App</h3>
 						<p>Click this link to access my Bronze version of this application.</p>
-						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button"></a><p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button">Bronze App</a><p>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Gold GitHub Pages</h3>
 						<p>Click this link to access my Gold GitHub source code of this application</p>
-						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button"></a></p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button">Gold GH-Pages</a></p>
 					</div>
 					
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Bronze GitHub Pages</h3>
 						<p>Click this link to access my Bronze GitHub source code of this application</p>
-						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button"></a></p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button">Bronze GH-Pages</a></p>
 					</div>
 					
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>GitHub Repository</h3>
-						<p>Learn more about this developer.</p>
-						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button"></a></p>
+						<p>Check out all the source code for my apps at GitHub.com.</p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button">GitHub</a></p>
 					</div>
 				</div>	
 			<!-- Fixed footer and navbar -->
@@ -161,6 +222,7 @@
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#browse" data-icon="grid">Browse</a></li>
+						<li><a href="#add" data-icon="plus">Add</a></li>
 						<li><a href="#about" data-icon="info">About</a></li>
 					</ul>
 				</div>	
