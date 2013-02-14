@@ -1,0 +1,84 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Homework Tracker App</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="main">
+	
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<h1>Homework Tracker</h1>
+		</div>
+		
+		<div data-role="content">
+			<ul>
+				<li><a href="#add">
+					<h3>Add Item</h3>
+					<p>My app is starting to look pretty cool</p>
+				</a></li>
+			</ul>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="main">
+			<h4>footer</h4>
+		</div>
+	
+	</div>
+
+	<div data-role="page" id="add" data-add-back-btn="true">
+	
+		<div data-role="header" data-position="fixed">
+			<h1>Add item</h1>
+		</div>
+		
+		<div data-role="content">
+			<ul data-role="listview">
+				<li>
+					<a>
+						<img src=""/ >
+						<h3>Stuff 1<h3>
+						<p>This is the stuff for my first item.</p>
+					<a/></li>
+				<li>Stuff 2</li>
+				<li>Stuff 3</li>
+				<li>Stuff 4</li>
+			</ul>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-id="main">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#main" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#browse">Browse</a></li>
+					<li><a href="#news">News</a></li>
+				</ul>
+		</div>
+	
+	</div>
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
