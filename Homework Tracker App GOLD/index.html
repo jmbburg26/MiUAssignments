@@ -16,7 +16,7 @@
 		<title>Homework Tracker</title>
 		
 		<!-- My stylesheets -->
-		<link rel="stylesheet" href="themes/mytheme.min.css" />
+		<link rel="stylesheet" href="themes2/mytheme2.min.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile.structure-1.3.0-rc.1.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
 	
@@ -74,12 +74,28 @@
 		<div data-role="page" id="error" data-add-back-btn="true" data-theme="b">
 		
 			<div data-role="header" data-position="fixed">
-				<h1>Homework Tracker</h1>
+				<h1>Browse</h1>
+			</div>
+			
+			<div data-role="content">
+				
+				<!-- Feature Image -->
+				<div>
+					<a href="additem.html"><img src="images/AppFeature.jpg" width="290" height="80"></img></a>
+				</div>
+				
+				<!-- Search Area -->
+				<div>
+					<div><p>Enter search items into the box:</p></div>
+					<input id="search" type="text" placeholder="Enter search here">
+					<input id="submit" type="submit" value="Search">
+				</div>
 			</div>
 			
 			<div data-role="content" id="error" data-inset="true">
 				<p>This page is under construction. Please check back at a later time.</p>
 			</div>
+			
 			<!-- Fixed footer and navbar -->
 			<div data-role="footer" data-position="fixed" data-id="error">
 				<div data-role="navbar">
@@ -95,20 +111,39 @@
 			
 		<!-- My about page that shows my information -->	
 		<div data-role="page" id="about" data-add-back-btn="true" data-theme="b">
+			
 			<div data-role="header" data-position="fixed">
-				<h1>Homework Tracker</h1>
+				<h1>About App</h1>
 			</div>
 			
-			<div data-role="content" id="about">
-				<div>
-					<ul>
-						<li><p>Developer Information</p></li>
-						<li><p>Bronze App</p></li>
-						<li><p>Gold gh-pages</p></li>
-						<li><p>Bronze gh-pages</p></li>
-						<li><p>GitHub Repository</p></li>
-					</ul>
+			<div data-role="content">
+				
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Developer Information</h3>
+					<p>Learn more about this developer.</p>
 				</div>
+				
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Bronze App</h3>
+					<p>Click this link to access my Bronze version of this application.</p>
+					
+				</div>
+				
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Gold GitHub Pages</h3>
+					<p>Click this link to access my Gold GitHub source code of this application</p>
+				</div>
+				
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Bronze GitHub Pages</h3>
+					<p>Click this link to access my Bronze GitHub source code of this application</p>
+				</div>
+				
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>GitHub Repository</h3>
+					<p>Learn more about this developer.</p>
+				</div>
+					
 			<!-- Fixed footer and navbar -->
 			<div data-role="footer" data-position="fixed" data-id="about">
 				<div data-role="navbar">
