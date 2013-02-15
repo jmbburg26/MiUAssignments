@@ -1,7 +1,8 @@
 <!-- John Brandenburg -->
 <!-- MiU -->
 <!-- Term 1302 -->
-<!-- Project 1: Homework Tracker -->
+<!-- Project 2: Homework Tracker -->
+<!-- BRONZE App -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,34 +10,229 @@
 		<meta keywords="homework, assignment, tracker" />
 		<meta name="desrciption" content="The first web app of John Brandenburg" />
 		<meta name="robots" content="index, follow" />
-		<meta name="viewport" content="user-scalable=no, width=device-width initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0" />
 		<meta name="HandheldFriendly" content="True" />
 		<meta name="MobileOptimized" content="320" />
+		<meta http-equiv="cleartype" content="on">
 		<title>Homework Tracker</title>
-		<link href="css/styles.css" rel="stylesheet" />
+		
+		<!-- My stylesheets -->
+		<link rel="stylesheet" href="themes/mytheme.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile.structure-1.3.0-rc.1.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	
+		<!-- Script for Modernizer -->
+		<script src="js/libs/modernizr.custom.min.js"></script>	
 	</head>
+	
 	<body>
-		<header><h1>Homework Tracker</h1></header>
-		<fieldset>
-	<!-- Feature Image -->
-			<p1><a href="additem.html"><img src="images/AppFeature.jpg" width="260" height="60"></img></a></p1>
-	<!-- Search Area -->
-			<form>
-				<div><p2>Enter search items into the box:</p2></div>
-				<input id="search" type="text" placeholder="Enter search here">
-				<input id="submit" type="submit" value="Search">
-			</form>
-		</fieldset>
-	<!-- Browse title and buttons -->
-		<div><p2>Select A Category To Browse:</p2></div>
-		<fieldset>
-			<ol>
-				<div><button>First Name</button></div>
-				<div><button>Last Name</button></div>
-				<div><button>Email</button></div>
-				<div><button>Course</button></div>
-				<div><button>Date</button></div>
-			</ol>
-		</fieldset>
+		
+		<!-- My home page for my app -->	
+		<div data-role="page" id="home" data-theme="b">
+			<div data-role="header" data-position="fixed">
+				<h1>Homework Tracker</h1>
+			</div>
+			
+			<div data-role="content">
+				
+				<!-- Feature Image -->
+				<div>
+					<a href="additem.html"><img src="images/AppFeature.jpg" width="290" height="80"></img></a>
+				</div>
+				
+			</div>
+			<!-- Browse title and buttons -->
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" data-filter="true">
+					<h3>Select A Category To Browse:</h3>
+					<li><a href="#browse">First Name</a></li>
+					<li><a href="#browse">Last Name</a></li>
+					<li><a href="#browse">Email</a></li>
+					<li><a href="#browse">Course</a></li>
+					<li><a href="#browse">Date</a></li>
+				</ul>
+			</div>
+			<!-- Fixed footer and navbar -->
+			<div data-role="footer" data-position="fixed" data-id="main">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#browse" data-icon="grid">Browse</a></li>
+						<li><a href="#add" data-icon="plus">Add</a></li>
+						<li><a href="#about" data-icon="info">About</a></li>
+					</ul>
+				</div>	
+			</div>
+			
+		</div>
+		
+		<!-- My browse page with functioning search -->	
+		<div data-role="page" id="browse" data-add-back-btn="true" data-theme="b">
+		
+			<div data-role="header" data-position="fixed">
+				<h1>Browse</h1>
+			</div>
+			
+			<div data-role="content">
+				
+			</div>
+			
+			<div data-role="content" id="browse">
+				<div data-role="content">
+					<ul data-role="grid" data-filter="true">
+						<li data-role="list-divider">BRANDENBURGS</li>
+						
+						<li>
+							<img src="images/jbrandenburg.png"></img>
+							<h3>John Brandenburg</h3>
+							<p>Course: MiU</p>
+						</li>
+						<li>
+							<img src="images/abrandenburg.png"></img>
+							<h3>Amanda Brandenburg</h3>
+							<p>Course: PMA</p>
+						</li>
+						<li>
+							<img src="images/dbrandenburg.png"></img>
+							<h3>Douglas Brandenburg</h3>
+							<p>Course: SDI</p>
+						</li>
+						<li>
+							<img src="images/rbrandenburg.png"></img>
+							<h3>Rhonda Brandenburg</h3>
+							<p>Course: MMD</p>
+						</li>
+						<li>
+							<img src="images/sbrandenburg.png"></img>
+							<h3>Sarah Brandenburg</h3>
+							<p>Course: MMD</p>
+						</li>
+						<li>
+							<img src="images/zbrandenburg.png"></img>
+							<h3>Zachary Brandenburg</h3>
+							<p>Course: VFW</p>
+						</li>
+						<li>
+							<img src="images/mbrandenburg.png"></img>
+							<h3>Melissa Brandenburg</h3>
+							<p>Course: SDI</p>
+						</li>
+						<li data-role="list-divider">BLADORNS</li>
+						<li>
+							<img src="images/abladorn.png"></img>
+							<h3>Allan Bladorn</h3>
+							<p>Course: ENG</p>
+						</li>
+						<li>
+							<img src="images/rbladorn.png"></img>
+							<h3>Rebecca Bladorn</h3>
+							<p>Course: PMA</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- Fixed footer and navbar -->
+			<div data-role="footer" data-position="fixed" data-id="browse">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#browse" data-icon="grid">Browse</a></li>
+						<li><a href="#add" data-icon="plus">Add</a></li>
+						<li><a href="#about" data-icon="info">About</a></li>
+					</ul>
+				</div>	
+			</div>
+			
+		</div>
+			
+		<div data-role="page" id="add" data-add-back-btn="true" data-theme="b">
+			
+			<div data-role="header" data-position="fixed">
+				<h1>Add Item</h1>
+			</div>
+			
+			<div data-role="content" id="add" data-inset="true">
+				<p>This page is under construction. Please check back at a later time.</p>
+			</div>
+			
+			<!-- Fixed footer and navbar -->
+			<div data-role="footer" data-position="fixed" data-id="error">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#browse" data-icon="grid">Browse</a></li>
+						<li><a href="#add" data-icon="plus">Add</a></li>
+						<li><a href="#about" data-icon="info">About</a></li>
+					</ul>
+				</div>	
+			</div>
+			
+		</div>
+		<!-- My about page that shows my information -->	
+		<div data-role="page" id="about" data-add-back-btn="true" data-theme="b">
+			
+			<div data-role="header" data-position="fixed">
+				<h1>About App</h1>
+			</div>
+			
+			<div data-role="content">
+				
+				<div data-role="collapsible-set" data-theme="b">
+					
+					<div data-role="collapsible" data-collapsed="true">
+						<img src="images/jbrandenburg.png"></img>
+						<h3>Developer Information</h3>
+						<p>John Brandenburg is a student at Full Sail Univerisity.</p>
+						<p>He is currently in the Mobile Development Program.</p>
+						<p>John resides in Warren, Michigan with his family.</p>
+						<p>Be sure to check John out on all these social networks:</p>
+						<p><a href="http://www.facebook.com/jmbburg26" data-role="button">FaceBook</a></p>
+						<p><a href="https://twitter.com/jmbburg26" data-role="button">Twitter</a></p>
+						<p><a href="https://plus.google.com/u/0/115446806115928910427/posts/p/pub" data-role="button">Google+</a></p>
+						<p><a href="https://www.youtube.com/user/jmbburg26" data-role="button">YouTube</a></p>
+					</div>
+					
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Gold App</h3>
+						<p>Click this link to access my Bronze version of this application.</p>
+						<p><a href="file://localhost/Users/jmbburg26/Dropbox/Docs/FSO/MiU/MiUAssignents/MiUAssignments/Homework%20Tracker%20App%20GOLD/index.html" data-role="button">Gold App</a><p>
+					</div>
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Gold GitHub Pages</h3>
+						<p>Click this link to access my Gold GitHub source code of this application</p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button">Gold GH-Pages</a></p>
+					</div>
+					
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Bronze GitHub Pages</h3>
+						<p>Click this link to access my Bronze GitHub source code of this application</p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button">Bronze GH-Pages</a></p>
+					</div>
+					
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>GitHub Repository</h3>
+						<p>Check out all the source code for my apps at GitHub.com.</p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button">GitHub</a></p>
+					</div>
+				</div>	
+			<!-- Fixed footer and navbar -->
+			<div data-role="footer" data-position="fixed" data-id="about">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#browse" data-icon="grid">Browse</a></li>
+						<li><a href="#add" data-icon="plus">Add</a></li>
+						<li><a href="#about" data-icon="info">About</a></li>
+					</ul>
+				</div>	
+			</div>
+			
+		</div>
+		
+		<!-- JavaScript -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
