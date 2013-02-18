@@ -73,9 +73,6 @@
 				<h1>Browse</h1>
 			</div>
 			
-			<div data-role="content">
-				
-			</div>
 			
 			<div data-role="content" id="browse">
 				<div data-role="content">
@@ -153,22 +150,53 @@
 				<h1>Add Item</h1>
 			</div>
 			
-			<div data-role="content" id="add" data-inset="true">
-				<p>This page is under construction. Please check back at a later time.</p>
-			</div>
-			
-			<!-- Fixed footer and navbar -->
-			<div data-role="footer" data-position="fixed" data-id="error">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#home" data-icon="home">Home</a></li>
-						<li><a href="#browse" data-icon="grid">Browse</a></li>
-						<li><a href="#add" data-icon="plus">Add</a></li>
-						<li><a href="#about" data-icon="info">About</a></li>
-					</ul>
-				</div>	
-			</div>
-			
+			<div data-role="content">
+				<form action="" method="post" id="additemform">
+					<div data-role="fieldcontain">
+						<label for "fname">First Name:</label>
+						<input type="text" name="fname" id="fname" />
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for "lname">Last Name:</label>
+						<input type="text" name="lname" id="lname" />
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for "email">Email:</label>
+						<input type="text" name="email" id="email" />
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for "time">Time To Complete:</label>
+						<input type="range" name="time" id="time" value="0" min="1" max="10" />
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for "notes">Notes:</label>
+						<textarea></textarea>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for "due">Project?</label>
+						<select data-role="slider">
+							<option value="off">No</option>
+							<option value="on">Yes</option>
+						</select>
+					</div>
+				</form>
+			</div>	
+				<!-- Fixed footer and navbar -->
+				<div data-role="footer" data-position="fixed" data-id="error">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home" data-icon="home">Home</a></li>
+							<li><a href="#browse" data-icon="grid">Browse</a></li>
+							<li><a href="#add" data-icon="plus">Add</a></li>
+							<li><a href="#about" data-icon="info">About</a></li>
+						</ul>
+					</div>	
+				</div>
 		</div>
 		<!-- My about page that shows my information -->	
 		<div data-role="page" id="about" data-add-back-btn="true" data-theme="b">
