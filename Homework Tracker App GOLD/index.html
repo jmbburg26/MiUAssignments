@@ -151,7 +151,8 @@
 			</div>
 			
 			<div data-role="content">
-				<form action="" method="post" id="additemform">
+				<form action="" id="additemform">
+					
 					<div data-role="fieldcontain">
 						<label for "fname">First Name:</label>
 						<input type="text" name="fname" id="fname" />
@@ -168,8 +169,33 @@
 					</div>
 					
 					<div data-role="fieldcontain">
+						<label for="select-course">Select Course</label>
+						<select name="select-course" id="select-course">
+							<option data-placeholder="true">Choose A Course</option>
+							<option value="mmd">MMD</option>
+							<option value="mmd2">MMD2</option>
+							<option value="sdi">SDI</option>
+							<option value="sdi">ASD</option>
+							<option value="miu">MiU</option>
+							<option value="vfw">VFW</option>
+							<option value="pma">PMA</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup" data-type="horizontal">
+							<legend>Project Due?</legend>
+							<input type="radio" value="Yes" name="projectdue" id="projectdue-1"></input>
+							<label for="projectdue-1">Yes</label>
+							<input type="radio" value="No" name="projectdue" id="projectdue-2"></input>
+							<label for="projectdue-2">No</label>
+							<input type="radio" value="Unknown" name="projectdue" id="projectdue-3"></input>
+							<label for="projectdue-3">Unknown</label>
+						</fieldset>
+					</div>
+					
+					<div data-role="fieldcontain">
 						<label for "time">Time To Complete:</label>
-						<input type="range" name="time" id="time" value="0" min="1" max="10" />
+						<input type="range" name="time" id="time" value="0" min="1" max="10" data-highlight="true" />
 					</div>
 					
 					<div data-role="fieldcontain">
@@ -177,12 +203,9 @@
 						<textarea></textarea>
 					</div>
 					
-					<div data-role="fieldcontain">
-						<label for "due">Project?</label>
-						<select data-role="slider">
-							<option value="off">No</option>
-							<option value="on">Yes</option>
-						</select>
+					<div>
+						<input type="submit" value="Save My Assignment" data-theme-"b"/>
+						<input type="reset" value="Reset Form" data-theme-"a"/>
 					</div>
 				</form>
 			</div>	
@@ -216,10 +239,10 @@
 						<p>He is currently in the Mobile Development Program.</p>
 						<p>John resides in Warren, Michigan with his family.</p>
 						<p>Be sure to check John out on all these social networks:</p>
-						<p><a href="http://www.facebook.com/jmbburg26" data-role="button">FaceBook</a></p>
-						<p><a href="https://twitter.com/jmbburg26" data-role="button">Twitter</a></p>
-						<p><a href="https://plus.google.com/u/0/115446806115928910427/posts/p/pub" data-role="button">Google+</a></p>
-						<p><a href="https://www.youtube.com/user/jmbburg26" data-role="button">YouTube</a></p>
+						<p><a href="http://www.facebook.com/jmbburg26" data-role="button" data-ajax="false">FaceBook</a></p>
+						<p><a href="https://twitter.com/jmbburg26" data-role="button" data-ajax="false">Twitter</a></p>
+						<p><a href="https://plus.google.com/u/0/115446806115928910427/posts/p/pub" data-role="button" data-ajax="false">Google+</a></p>
+						<p><a href="https://www.youtube.com/user/jmbburg26" data-role="button" data-ajax="false">YouTube</a></p>
 					</div>
 					
 					<div data-role="collapsible" data-collapsed="true">
@@ -230,19 +253,19 @@
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Gold GitHub Pages</h3>
 						<p>Click this link to access my Gold GitHub source code of this application</p>
-						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button">Gold GH-Pages</a></p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button" data-ajax="false">Gold GH-Pages</a></p>
 					</div>
 					
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Bronze GitHub Pages</h3>
 						<p>Click this link to access my Bronze GitHub source code of this application</p>
-						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button">Bronze GH-Pages</a></p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button" data-ajax="false">Bronze GH-Pages</a></p>
 					</div>
 					
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>GitHub Repository</h3>
 						<p>Check out all the source code for my apps at GitHub.com.</p>
-						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button">GitHub</a></p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button" data-ajax="false">GitHub</a></p>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Friendly Support</h3>
