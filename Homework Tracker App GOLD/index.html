@@ -19,7 +19,6 @@
 		<!-- My stylesheets -->
 		<link rel="stylesheet" href="themes2/mytheme2.min.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile.structure-1.3.0-rc.1.min.css" />
-		<link rel="stylesheet" href="css/style.css" />
 	
 		<!-- Script for Modernizer -->
 		<script src="js/libs/modernizr.custom.min.js"></script>	
@@ -143,7 +142,7 @@
 			
 		</div>
 		
-		<!-- Error page that will be Add Item page in future -->	
+		<!-- My Add Item Page -->	
 		<div data-role="page" id="add" data-add-back-btn="true" data-theme="b">
 			
 			<div data-role="header" data-position="fixed">
@@ -155,22 +154,22 @@
 					
 					<div data-role="fieldcontain">
 						<label for "fname">First Name:</label>
-						<input type="text" name="fname" id="fname" />
+						<input type="text" name="fname" id="fname" class="required" />
 					</div>
 					
 					<div data-role="fieldcontain">
 						<label for "lname">Last Name:</label>
-						<input type="text" name="lname" id="lname" />
+						<input type="text" name="lname" id="lname" class="required" />
 					</div>
 					
 					<div data-role="fieldcontain">
 						<label for "email">Email:</label>
-						<input type="text" name="email" id="email" />
+						<input type="text" name="email" id="email" class="required email" />
 					</div>
 					
 					<div data-role="fieldcontain">
 						<label for="select-course">Select Course</label>
-						<select name="select-course" id="select-course">
+						<select name="select-course" id="select-course" class="required">
 							<option data-placeholder="true">Choose A Course</option>
 							<option value="mmd">MMD</option>
 							<option value="mmd2">MMD2</option>
@@ -182,9 +181,9 @@
 						</select>
 					</div>
 					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup" data-type="horizontal">
+						<fieldset data-role="controlgroup">
 							<legend>Project Due?</legend>
-							<input type="radio" value="Yes" name="projectdue" id="projectdue-1"></input>
+							<input type="radio" value="Yes" name="projectdue" id="projectdue-1" class="required"></input>
 							<label for="projectdue-1">Yes</label>
 							<input type="radio" value="No" name="projectdue" id="projectdue-2"></input>
 							<label for="projectdue-2">No</label>
@@ -207,6 +206,7 @@
 						<input type="submit" value="Save My Assignment" data-theme-"b"/>
 						<input type="reset" value="Reset Form" data-theme-"a"/>
 					</div>
+					<a href="#usererrors" id="usererrorslinks" data-rel="dialog" data-transition="pop">Error Log</a>
 				</form>
 			</div>	
 				<!-- Fixed footer and navbar -->
@@ -286,9 +286,23 @@
 			</div>
 		</div>
 		
+		<div data-role="dialog" id="usererrors">
+			
+			<div data-role="header" data-position="fixed">
+				<h1>Missing Fields</h1>
+			</div>
+			
+			<div data-role="content">
+				<ul>
+					<li>Test</li>
+				</ul>
+			</div>
+		</div>
+		
 		<!-- JavaScript -->
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/sample-main.js"></script>
 	</body>
 </html>
