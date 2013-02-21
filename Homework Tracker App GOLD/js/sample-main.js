@@ -6,14 +6,21 @@ $('#home').on('pageinit', function(){
 $('#add').on('pageinit', function(){
 
 		var myForm = $('#additemform'),
-                var errorLink = $(#usererrors),
+                    errorLink = $('#usererrors')
+                ;
                 
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
                                 errorLink.click();
+                                var html = '';
                                 for (var key in validator.submitted){
-                                                $('label[for^="'+ key +'"]')
-                                }
+                                        var label = $('label[for^="'+ key +'"]');
+                                        var legend = label.closest('fieldset').find('ui-controlgroup-label');
+                                        var fieldName = legend.length ? legend.text() : label.text();
+                                        console.log(fieldName)
+                                        html += '<li>' + fieldName +'<li>';
+                                };
+                                $("#usererrors ul").html(html);
                         },
 			submitHandler: function() {
                                 var data = myForm.serializeArray(); 

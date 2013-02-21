@@ -36,7 +36,7 @@
 				
 				<!-- Feature Image -->
 				<div>
-					<a href="additem.html"><img src="images/AppFeature.jpg" width="290" height="80"></img></a>
+					<a href="#add"><img src="images/AppFeature.jpg" width="290" height="80"></img></a>
 				</div>
 				
 			</div>
@@ -151,38 +151,41 @@
 			
 			<div data-role="content">
 				<form action="" id="additemform">
-					
-					<div data-role="fieldcontain">
-						<label for "fname">First Name:</label>
-						<input type="text" name="fname" id="fname" class="required" />
+					<div>
+						<p>*Indictaes a required field.</p>
 					</div>
 					
 					<div data-role="fieldcontain">
-						<label for "lname">Last Name:</label>
-						<input type="text" name="lname" id="lname" class="required" />
+						<label for "fname">*First Name:</label>
+						<input type="text" name="fname" id="fname" class="required" placeholder="Type first name here"/>
 					</div>
 					
 					<div data-role="fieldcontain">
-						<label for "email">Email:</label>
-						<input type="text" name="email" id="email" class="required email" />
+						<label for "lname" >*Last Name:</label>
+						<input type="text" name="lname" id="lname" class="required" placeholder="Type last name here"/>
 					</div>
 					
 					<div data-role="fieldcontain">
-						<label for="select-course">Select Course</label>
+						<label for "email">*Email:</label>
+						<input type="text" name="email" id="email" class="required email" placeholder="likethis@gmail.com"/>
+					</div>
+					
+					<div data-role="fieldcontain">
+						<label for="select-course">*Select Course</label>
 						<select name="select-course" id="select-course" class="required">
-							<option data-placeholder="true">Choose A Course</option>
-							<option value="mmd">MMD</option>
-							<option value="mmd2">MMD2</option>
-							<option value="sdi">SDI</option>
-							<option value="sdi">ASD</option>
-							<option value="miu">MiU</option>
-							<option value="vfw">VFW</option>
-							<option value="pma">PMA</option>
+							<option data-placeholder="true">-- Choose Course --</option>
+							<option value="MMD">MMD</option>
+							<option value="MMD2">MMD2</option>
+							<option value="SDI">SDI</option>
+							<option value="ASD">ASD</option>
+							<option value="MiU">MiU</option>
+							<option value="VFW">VFW</option>
+							<option value="PMA">PMA</option>
 						</select>
 					</div>
 					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup">
-							<legend>Project Due?</legend>
+						<fieldset data-role="controlgroup" data-mini="true">
+							<legend>*Project Due?</legend>
 							<input type="radio" value="Yes" name="projectdue" id="projectdue-1" class="required"></input>
 							<label for="projectdue-1">Yes</label>
 							<input type="radio" value="No" name="projectdue" id="projectdue-2"></input>
@@ -193,20 +196,24 @@
 					</div>
 					
 					<div data-role="fieldcontain">
-						<label for "time">Time To Complete:</label>
-						<input type="range" name="time" id="time" value="0" min="1" max="10" data-highlight="true" />
+						<label for="datedue">Date Due:</label>
+						<input type="date" data-clear-btn="false" name="datedue" id="datedue" value="">
 					</div>
 					
 					<div data-role="fieldcontain">
-						<label for "notes">Notes:</label>
+						<label for "time">Time To Complete:</label>
+						<input type="range" name="time" id="time" data-highlight="true" data-mini="true" value="1" min="1" max="12" data-highlight="true" data-mini="true"/>
+					</div>
+
+					<div data-role="fieldcontain">
+						<label for "notes">Assignment Details:</label>
 						<textarea></textarea>
 					</div>
 					
 					<div>
-						<input type="submit" value="Save My Assignment" data-theme-"b"/>
-						<input type="reset" value="Reset Form" data-theme-"a"/>
+						<input type="submit" value="Save My Assignment" />
+						<a href="#add">Cancel</a>
 					</div>
-					<a href="#usererrors" id="usererrorslinks" data-rel="dialog" data-transition="pop">Error Log</a>
 				</form>
 			</div>	
 				<!-- Fixed footer and navbar -->
