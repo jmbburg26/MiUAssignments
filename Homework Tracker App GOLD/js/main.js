@@ -8,22 +8,25 @@ $('#add').on('pageinit', function(){
 			errorLink = $('#errorlinks')
 		;
                 
-		myAddForm.validate({
+	myAddForm.validate({
 		invalidHandler: function(form, validator) {
                        errorLink.click();
+		       var html ='';
                        for (var key in validator.submitted){
-				var label = $('label[for^="'+ key +'"]')
-				var legend = label.closest('fieldset').find('ui-controlgroup-label');
+				var label = $('label[for^="'+ key +'"]').not('[generated]');
+				var legend = label.closest('fieldset').find('.ui-controlgroup-label');
 				var fieldName = legend.length ? legend.text() : label.text();
-				console.log(fieldName);
-				};
-			},
+				html += '<li>'+ fieldName +'</li>';
+			};
+			console.log(fieldName);
+			$("#usererrors ul").html(html);
+		},
 			submitHandler: function() {
                                 var itemData = myAddForm.serializeArray();
                                 parseAddForm(itemData);
 				alert("Homework Added!");
                                 }
-                });
+        });
 	//any other code needed for addItem page goes here
 	
 		// Save user data to Local Storage
