@@ -19,6 +19,7 @@
 		<!-- My stylesheets -->
 		<link rel="stylesheet" href="themes2/mytheme2.min.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile.structure-1.3.0-rc.1.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />
 	
 		<!-- Script for Modernizer -->
 		<script src="js/libs/modernizr.custom.min.js"></script>	
@@ -171,9 +172,9 @@
 					</div>
 					
 					<div data-role="fieldcontain">
-						<label for="select-course">*Select Course</label>
-						<select name="select-course" id="select-course" class="required">
-							<option data-placeholder="true">-- Choose Course --</option>
+						<label for="select-course">Select Course</label>
+						<select name="select-course" id="course">
+							<option data-placeholder="true" value>-- Choose Course --</option>
 							<option value="MMD">MMD</option>
 							<option value="MMD2">MMD2</option>
 							<option value="SDI">SDI</option>
@@ -184,8 +185,8 @@
 						</select>
 					</div>
 					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup" data-mini="true">
-							<legend>*Project Due?</legend>
+						<fieldset data-role="controlgroup" id="projectdue"data-mini="true">
+							<legend>Project Due?</legend>
 							<input type="radio" value="Yes" name="projectdue" id="projectdue-1" class="required"></input>
 							<label for="projectdue-1">Yes</label>
 							<input type="radio" value="No" name="projectdue" id="projectdue-2"></input>
@@ -202,20 +203,21 @@
 					
 					<div data-role="fieldcontain">
 						<label for "time">Time To Complete:</label>
-						<input type="range" name="time" id="time" data-highlight="true" data-mini="true" value="1" min="1" max="12" data-highlight="true" data-mini="true"/>
+						<input type="range" name="time" id="time" data-highlight="true" data-mini="true" value="4" min="1" max="12" data-highlight="true" data-mini="true"/>
 					</div>
-
+					
 					<div data-role="fieldcontain">
-						<label for "notes">Assignment Details:</label>
+						<label for "notes" id="notes">Assignment Details:</label>
 						<textarea></textarea>
 					</div>
 					
 					<div>
-						<input type="submit" value="Save My Assignment" />
-						<a href="#add">Cancel</a>
+						<input type="submit" value="Save My Assignment" data-inline="true" data-theme="a" />
+						<input type="reset" value="Reset Form" data-inline="true" data-mini="true" />
 					</div>
+					<a href="#usererrors" id="errorlinks" data-rel="dialog" data-transition="pop">Errors</a>
 				</form>
-			</div>	
+			</div>
 				<!-- Fixed footer and navbar -->
 				<div data-role="footer" data-position="fixed" data-id="error">
 					<div data-role="navbar">
@@ -228,6 +230,20 @@
 					</div>	
 				</div>
 		</div>
+		
+		<div data-role="dialog" id="usererrors">
+			
+			<div data-role="header" data-position="fixed">
+				<h1>Missing Fields</h1>
+			</div>
+			
+			<div data-role="content">
+				<ul></ul>
+			</div>
+		</div>
+		
+		
+		
 		<!-- My about page that shows my information -->	
 		<div data-role="page" id="about" data-add-back-btn="true" data-theme="b">
 			
@@ -275,9 +291,31 @@
 						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button" data-ajax="false">GitHub</a></p>
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
-						<h3>Friendly Support</h3>
-						<p>Click here to connect with fellow Full Sailors like yourself.</p>
-						<p><a href="#support" data-role="button">Support</a></p>
+						<h3>Latest News</h3>
+						<ul>
+							<li><h3>1.2 Update Released</h3></li>
+							<p>02-21-2013: Version 1.2 of the Homework Tracker App was released.</p>
+							<p>Update Includes: </p>
+							<ol>
+								<li>Add Item Form converted to JQM Form</li>
+								<li>JQM Form Validation</li>
+								<li>News Stream</li>
+							</ol>
+						</ul>
+						<ul>
+							<li><h3>1.1 Update Released</h3></li>
+							<p>02-21-2013: Version 1.1 of the Homework Tracker App was released.</p>
+							<p>Update Includes: </p>
+							<ol>
+								<li>Converted to JQuery Mobile</li>
+								<li>Added new feature graphic</li>
+								<li>Added delevoper section</li>
+							</ol>
+						</ul>
+						<ul>
+							<li><h3>1.0 Homework Tracker App Released</h3></li>
+							<p>02-21-2013: This is the intial release of Version 1.0 of the Homework Tracker App</p>
+						</ul>
 					</div>
 				</div>	
 			<!-- Fixed footer and navbar -->
@@ -293,23 +331,12 @@
 			</div>
 		</div>
 		
-		<div data-role="dialog" id="usererrors">
-			
-			<div data-role="header" data-position="fixed">
-				<h1>Missing Fields</h1>
-			</div>
-			
-			<div data-role="content">
-				<ul>
-					<li>Test</li>
-				</ul>
-			</div>
-		</div>
+		
 		
 		<!-- JavaScript -->
 		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="js/sample-main.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
