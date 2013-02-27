@@ -17,8 +17,8 @@
 		<title>Homework Tracker</title>
 		
 		<!-- My stylesheets -->
-		<link rel="stylesheet" href="themes/mytheme.css" />
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile.structure-1.3.0-rc.1.min.css" />
+		<link rel="stylesheet" href="themes/test.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 	
 		<!-- Script for Modernizer -->
@@ -30,14 +30,15 @@
 		<!-- My home page for my app -->	
 		<div data-role="page" id="home" data-theme="a">
 			<div data-role="header" data-position="fixed">
-				<h1>Homework Tracker</h1>
+				<title>Homework Tracker</title>
+				<h1>Home</h1>
 			</div>
 			
 			<div data-role="content">
 				
 				<!-- Feature Image -->
 				<div>
-					<a href="#add"><img src="images/AppFeature.jpg" width="290" height="80"></img></a>
+					<a href="#add"><img src="images/test2.png" width="290" height="100"></img></a>
 				</div>
 				
 			</div>
@@ -71,6 +72,9 @@
 		
 			<div data-role="header" data-position="fixed">
 				<h1>Browse</h1>
+			</div>
+			<div data-role="content">
+				<title><a href="#home"><img src="images/BrandingLogo.png"></img></a></title>
 			</div>
 			
 			
@@ -151,7 +155,7 @@
 			</div>
 			
 			<div data-role="content">
-				<form action="" id="additemform">
+				<form action="" id="additemform" novalidate="">
 					<div>
 						<p>*Indictaes a required field.</p>
 					</div>
@@ -185,7 +189,7 @@
 						</select>
 					</div>
 					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup" id="projectdue"data-mini="true">
+						<fieldset data-role="controlgroup" id="projectdue" data-mini="true">
 							<legend>Project Due?</legend>
 							<input type="radio" value="Yes" name="projectdue" id="projectdue-1" class="required"></input>
 							<label for="projectdue-1">Yes</label>
@@ -203,7 +207,7 @@
 					
 					<div data-role="fieldcontain">
 						<label for "time">Time To Complete:</label>
-						<input type="range" name="time" id="time" data-highlight="true" data-mini="true" value="4" min="1" max="12" data-highlight="true" data-mini="true"/>
+						<input type="range" name="time" id="time" data-highlight="true" data-mini="true" value="5" min="1" max="10"/>
 					</div>
 					
 					<div data-role="fieldcontain">
@@ -317,7 +321,7 @@
 							<p>02-07-2013: This is the intial release of Version 1.0 of the Homework Tracker App</p>
 						</ul>
 					</div>
-				</div>	
+				</div>
 			<!-- Fixed footer and navbar -->
 			<div data-role="footer" data-position="fixed" data-id="about" data-theme="a">
 				<div data-role="navbar">
