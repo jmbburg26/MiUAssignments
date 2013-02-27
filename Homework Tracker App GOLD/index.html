@@ -31,7 +31,7 @@
 		<div data-role="page" id="home" data-theme="a">
 			<div data-role="header" data-position="fixed">
 				<title>Homework Tracker</title>
-				<h1>Home</h1>
+				<h1><a href="#home"><img src="images/brandingLogo.png"></img></a>Home</h1>
 			</div>
 			
 			<div data-role="content">
@@ -80,7 +80,7 @@
 			
 			<div data-role="content" id="browse">
 				<div data-role="content">
-					<ul data-role="listview" data-filter="true" data-theme="b">
+					<ul data-role="listview" data-filter="true" data-theme="a">
 						<li data-role="list-divider">BRANDENBURGS</li>
 						
 						<li>
@@ -155,7 +155,7 @@
 			</div>
 			
 			<div data-role="content">
-				<form action="" id="additemform" novalidate="">
+				<form action="" id="additemform">
 					<div>
 						<p>*Indictaes a required field.</p>
 					</div>
@@ -207,12 +207,12 @@
 					
 					<div data-role="fieldcontain">
 						<label for "time">Time To Complete:</label>
-						<input type="range" name="time" id="time" data-highlight="true" data-mini="true" value="5" min="1" max="10"/>
+						<input type="range" name="time" id="time" data-highlight="true" data-mini="true" value="" min="1" max="10"/>
 					</div>
 					
 					<div data-role="fieldcontain">
 						<label for "notes" id="notes">Assignment Details:</label>
-						<textarea></textarea>
+						<textarea cols="40" rows="8" name="notes" id="notes"></textarea>
 					</div>
 					
 					<div>
