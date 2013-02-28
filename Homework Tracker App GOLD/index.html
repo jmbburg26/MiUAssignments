@@ -1,7 +1,7 @@
 <!-- John Brandenburg -->
 <!-- MiU -->
 <!-- Term 1302 -->
-<!-- Project 2: Homework Tracker -->
+<!-- Project 4: Homework Tracker -->
 <!-- GOLD App -->
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,7 @@
 		<title>Homework Tracker</title>
 		
 		<!-- My stylesheets -->
-		<link rel="stylesheet" href="themes/test.min.css" />
+		<link rel="stylesheet" href="themes/mythemefinal3.min.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 	
@@ -31,17 +31,14 @@
 		<div data-role="page" id="home" data-theme="a">
 			<div data-role="header" data-position="fixed">
 				<title>Homework Tracker</title>
-				<h1><a href="#home"><img src="images/brandingLogo.png"></img></a>Home</h1>
+				<h1><a href="#home"><img src="images/brandingLogo.png"></a></h1>
 			</div>
 			
-			<div data-role="content">
-				
-				<!-- Feature Image -->
-				<div>
-					<a href="#add"><img src="images/test2.png" width="290" height="100"></img></a>
-				</div>
-				
+			 <!-- Feature Image -->
+			<div id="feature">
+				<a href="#add"><img src="images/feature.png" width="320" height="80"></img></a>
 			</div>
+
 			<!-- Browse title and buttons -->
 			<div data-role="content" data-theme="a">
 				<ul data-role="listview" data-inset="true" data-filter="true">
@@ -54,7 +51,7 @@
 				</ul>
 			</div>
 			<!-- Fixed footer and navbar -->
-			<div data-role="footer" data-position="fixed" data-id="main" data-theme="a">
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
@@ -68,15 +65,11 @@
 		</div>
 		
 		<!-- My browse page with functioning search -->	
-		<div data-role="page" id="browse" data-add-back-btn="true" data-theme="a">
+		<div data-role="page" id="browse" data-theme="a">
 		
 			<div data-role="header" data-position="fixed">
-				<h1>Browse</h1>
+				<h1><a href="#home"><img src="images/brandingLogo.png"></a></h1>
 			</div>
-			<div data-role="content">
-				<title><a href="#home"><img src="images/BrandingLogo.png"></img></a></title>
-			</div>
-			
 			
 			<div data-role="content" id="browse">
 				<div data-role="content">
@@ -134,7 +127,7 @@
 			</div>
 			
 			<!-- Fixed footer and navbar -->
-			<div data-role="footer" data-position="fixed" data-id="browse" data-theme="a">
+			<div data-role="footer" data-position="fixed" data-id="browse" data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
@@ -148,10 +141,10 @@
 		</div>
 		
 		<!-- My Add Item Page -->	
-		<div data-role="page" id="add" data-add-back-btn="true" data-theme="a">
+		<div data-role="page" id="add" data-theme="a">
 			
 			<div data-role="header" data-position="fixed">
-				<h1>Add Item</h1>
+				<h1><a href="#home"><img src="images/brandingLogo.png"></a></h1>
 			</div>
 			
 			<div data-role="content">
@@ -176,6 +169,18 @@
 					</div>
 					
 					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup" id="projectdue" data-mini="true">
+							<legend>Project Due?</legend>
+							<input type="radio" value="Yes" name="projectdue" id="projectdue-1" class="required"></input>
+							<label for="projectdue-1">Yes</label>
+							<input type="radio" value="No" name="projectdue" id="projectdue-2"></input>
+							<label for="projectdue-2">No</label>
+							<input type="radio" value="Unknown" name="projectdue" id="projectdue-3"></input>
+							<label for="projectdue-3">Unknown</label>
+						</fieldset>
+					</div>
+		
+					<div data-role="fieldcontain">
 						<label for="select-course">Select Course</label>
 						<select name="select-course" id="course">
 							<option data-placeholder="true" value>-- Choose Course --</option>
@@ -187,17 +192,6 @@
 							<option value="VFW">VFW</option>
 							<option value="PMA">PMA</option>
 						</select>
-					</div>
-					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup" id="projectdue" data-mini="true">
-							<legend>Project Due?</legend>
-							<input type="radio" value="Yes" name="projectdue" id="projectdue-1" class="required"></input>
-							<label for="projectdue-1">Yes</label>
-							<input type="radio" value="No" name="projectdue" id="projectdue-2"></input>
-							<label for="projectdue-2">No</label>
-							<input type="radio" value="Unknown" name="projectdue" id="projectdue-3"></input>
-							<label for="projectdue-3">Unknown</label>
-						</fieldset>
 					</div>
 					
 					<div data-role="fieldcontain">
@@ -216,14 +210,14 @@
 					</div>
 					
 					<div>
-						<input type="submit" value="Save My Assignment" data-inline="true" data-theme="a" />
+						<input type="submit" value="Save My Assignment" data-inline="true" data-theme="b" />
 						<input type="reset" value="Reset Form" data-inline="true" data-mini="true" />
 					</div>
 					<a href="#usererrors" id="errorlinks" data-rel="dialog" data-transition="pop">Errors</a>
 				</form>
 			</div>
 				<!-- Fixed footer and navbar -->
-				<div data-role="footer" data-position="fixed" data-id="error">
+				<div data-role="footer" data-position="fixed" data-id="error" data-theme="b">
 					<div data-role="navbar">
 						<ul>
 							<li><a href="#home" data-icon="home">Home</a></li>
@@ -234,25 +228,12 @@
 					</div>	
 				</div>
 		</div>
-		
-		<div data-role="dialog" id="usererrors">
-			
-			<div data-role="header" data-position="fixed">
-				<h1>Missing Fields</h1>
-			</div>
-			
-			<div data-role="content">
-				<ul></ul>
-			</div>
-		</div>
-		
-		
-		
+
 		<!-- My about page that shows my information -->	
-		<div data-role="page" id="about" data-add-back-btn="true" data-theme="a">
+		<div data-role="page" id="about" data-theme="a">
 			
-			<div data-role="header" data-position="fixed">
-				<h1>About App</h1>
+			<div data-role="header" data-position="fixed" data-icon="gears">
+				<h1><a href="#home"><img src="images/brandingLogo.png"></a></h1>
 			</div>
 			
 			<div data-role="content">
@@ -296,34 +277,45 @@
 					</div>
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Latest News</h3>
-						<ul>
-							<li><h3>1.2 Update Released</h3></li>
-							<p>02-21-2013: Version 1.2 of the Homework Tracker App was released.</p>
-							<p>Update Includes: </p>
-							<ol>
-								<li>Add Item Form converted to JQM Form</li>
-								<li>JQM Form Validation</li>
-								<li>News Stream</li>
-							</ol>
-						</ul>
-						<ul>
-							<li><h3>1.1 Update Released</h3></li>
-							<p>02-14-2013: Version 1.1 of the Homework Tracker App was released.</p>
-							<p>Update Includes: </p>
-							<ol>
-								<li>Converted to JQuery Mobile</li>
-								<li>Added new feature graphic</li>
-								<li>Added delevoper section</li>
-							</ol>
-						</ul>
-						<ul>
+						<div data-role="content" data-id"newsstream">
+							<ul>
+								<li><h3>1.3 Update Released</h3></li>
+								<p>02-28-2013: Version 1.5 of the Homework Tracker App was released.</p>
+								<p>Update Includes: </p>
+								<ol>
+									<li>New Feature Image</li>
+									<li>Streamline Branding</li>
+								</ol>
+							</ul>
+							<ul>
+								<li><h3>1.2 Update Released</h3></li>
+								<p>02-21-2013: Version 1.2 of the Homework Tracker App was released.</p>
+								<p>Update Includes: </p>
+								<ol>
+									<li>Add Item Form converted to JQM Form</li>
+									<li>JQM Form Validation</li>
+									<li>News Stream</li>
+								</ol>
+							</ul>
+							<ul>
+								<li><h3>1.1 Update Released</h3></li>
+								<p>02-14-2013: Version 1.1 of the Homework Tracker App was released.</p>
+								<p>Update Includes: </p>
+								<ol>
+									<li>Converted to JQuery Mobile</li>
+									<li>Added new feature graphic</li>
+									<li>Added delevoper section</li>
+								</ol>
+							</ul>
+							<ul>
 							<li><h3>1.0 Homework Tracker App Released</h3></li>
-							<p>02-07-2013: This is the intial release of Version 1.0 of the Homework Tracker App</p>
-						</ul>
+								<p>02-07-2013: This is the intial release of Version 1.0 of the Homework Tracker App</p>
+							</ul>
+						</div>
 					</div>
 				</div>
 			<!-- Fixed footer and navbar -->
-			<div data-role="footer" data-position="fixed" data-id="about" data-theme="a">
+			<div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
