@@ -31,7 +31,7 @@
 		<div data-role="page" id="home" data-theme="a">
 			<div data-role="header" data-position="fixed">
 				<title>Homework Tracker</title>
-				<h1><a href="#home"><img src="images/branding2.png"></a></h1>
+				<h1><a href="#home"><img src="images/brandingLogo.png"></a></h1>
 			</div>
 			
 			 <!-- Feature Image -->
@@ -68,7 +68,7 @@
 		<div data-role="page" id="browse" data-theme="a">
 		
 			<div data-role="header" data-position="fixed">
-				<h1><a href="#home"><img src="images/branding2.png"></a></h1>
+				<h1><a href="#home"><img src="images/brandingLogo.png"></a></h1>
 			</div>
 			
 			<div data-role="content" id="browse">
@@ -144,7 +144,7 @@
 		<div data-role="page" id="add" data-theme="a">
 			
 			<div data-role="header" data-position="fixed">
-				<h1><a href="#home"><img src="images/branding2.png"></a></h1>
+				<h1><a href="#home"><img src="images/brandingLogo.png"></a></h1>
 			</div>
 			
 			<div data-role="content">
@@ -169,7 +169,7 @@
 					</div>
 					
 					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup" id="projectdue" data-mini="true">
+						<fieldset data-role="controlgroup" id="projectdue" data-type="horizontal" data-mini="true">
 							<legend>Project Due?</legend>
 							<input type="radio" value="Yes" name="projectdue" id="projectdue-1" class="required"></input>
 							<label for="projectdue-1">Yes</label>
@@ -196,12 +196,12 @@
 					
 					<div data-role="fieldcontain">
 						<label for="datedue">Date Due:</label>
-						<input type="date" data-clear-btn="false" name="datedue" id="datedue" value="">
+						<input type="date" data-clear-btn="false" name="datedue" id="datedue" value="" />
 					</div>
 					
 					<div data-role="fieldcontain">
 						<label for "time">Time To Complete:</label>
-						<input type="range" name="time" id="time" data-highlight="true" data-mini="true" value="" min="1" max="10"/>
+						<input type="range" name="time" id="time" data-highlight="true" data-mini="true" value="2" min="1" max="10" />
 					</div>
 					
 					<div data-role="fieldcontain">
@@ -233,7 +233,7 @@
 		<div data-role="page" id="about" data-theme="a">
 			
 			<div data-role="header" data-position="fixed" data-icon="gears">
-				<h1><a href="#home"><img src="images/branding2.png"></a></h1>
+				<h1><a href="#home"><img src="images/brandingLogo.png"></a></h1>
 			</div>
 			
 			<div data-role="content">
@@ -252,35 +252,13 @@
 						<p><a href="https://plus.google.com/u/0/115446806115928910427/posts/p/pub" data-role="button" data-ajax="false">Google+</a></p>
 						<p><a href="https://www.youtube.com/user/jmbburg26" data-role="button" data-ajax="false">YouTube</a></p>
 					</div>
-					
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>Bronze App</h3>
-						<p>Click this link to access my Bronze version of this application.</p>
-						<p><a href="file://localhost/Users/jmbburg26/Dropbox/Docs/FSO/MiU/MiUAssignents/MiUAssignments/Homework%20Tracker%20App%20BRONZE/index.html" data-role="button">Bronze App</a><p>
-					</div>
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>Gold GitHub Pages</h3>
-						<p>Click this link to access my Gold GitHub source code of this application</p>
-						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button" data-ajax="false">Gold GH-Pages</a></p>
-					</div>
-					
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>Bronze GitHub Pages</h3>
-						<p>Click this link to access my Bronze GitHub source code of this application</p>
-						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button" data-ajax="false">Bronze GH-Pages</a></p>
-					</div>
-					
-					<div data-role="collapsible" data-collapsed="true">
-						<h3>GitHub Repository</h3>
-						<p>Check out all the source code for my apps at GitHub.com.</p>
-						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button" data-ajax="false">GitHub</a></p>
-					</div>
+				
 					<div data-role="collapsible" data-collapsed="true">
 						<h3>Latest News</h3>
 						<div data-role="content" data-id"newsstream">
 							<ul>
-								<li><h3>1.5 Update Released</h3></li>
-								<p>02-28-2013: Version 1.5 of the Homework Tracker App was released.</p>
+								<li><h3>1.3 Update Released</h3></li>
+								<p>02-28-2013: Version 1.3 of the Homework Tracker App was released.</p>
 								<p>Update Includes: </p>
 								<ol>
 									<li>New Feature Image</li>
@@ -312,6 +290,29 @@
 								<p>02-07-2013: This is the intial release of Version 1.0 of the Homework Tracker App</p>
 							</ul>
 						</div>
+					</div>
+					
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Bronze App</h3>
+						<p>Click this link to access my Bronze version of this application.</p>
+						<p><a href="file://localhost/Users/jmbburg26/Dropbox/Docs/FSO/MiU/MiUAssignents/MiUAssignments/Homework%20Tracker%20App%20BRONZE/index.html" data-role="button">Bronze App</a><p>
+					</div>
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Gold GitHub Pages</h3>
+						<p>Click this link to access my Gold GitHub source code of this application</p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button" data-ajax="false">Gold GH-Pages</a></p>
+					</div>
+					
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>Bronze GitHub Pages</h3>
+						<p>Click this link to access my Bronze GitHub source code of this application</p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button" data-ajax="false">Bronze GH-Pages</a></p>
+					</div>
+					
+					<div data-role="collapsible" data-collapsed="true">
+						<h3>GitHub Repository</h3>
+						<p>Check out all the source code for my apps at GitHub.com.</p>
+						<p><a href="https://github.com/jmbburg26/MiUAssignments.git" data-role="button" data-ajax="false">GitHub</a></p>
 					</div>
 				</div>
 			<!-- Fixed footer and navbar -->
