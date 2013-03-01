@@ -5,7 +5,8 @@ $('#home').on('pageinit', function(){
 	
 $('#add').on('pageinit', function(){
 		var 	myAddForm = $('#additemform'),
-			errorLink = $('#errorlinks')
+			errorLink = $('#errorlinks'),
+			defaultData= $('jsondata')
 		;
                 
 	myAddForm.validate({
@@ -35,20 +36,20 @@ $('#add').on('pageinit', function(){
 			localStorage.setItem(key, JSON.stringify(itemData));
 			console.log(itemData);
 		};
-	});
+		// Display data function
+		var autofillData = function (itemData){
+			for (var n in json){
+			var id = Math.floor(Math.random()*100000001);
+				localStorage.setItem(id, JSON.stringify(json[n]))
+			}
+		};
+});
 
 	//The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
 	
-	var autofillData = function (){
-	 
-	};
-
-	function getData(){
-		
-	};
 	
-
+	
 
 	var deleteItem = function (){
 		
